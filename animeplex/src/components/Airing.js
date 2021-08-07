@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Navbar } from "./Common/Navbar";
 import ShowCard from "./Common/ShowCard";
-const TopAnime = () => {
+const Airing = () => {
 	const [curAir, setCurAir] = useState([]);
 	useEffect(async () => {
 		const response = await fetch("https://api.jikan.moe/v3/top/anime/1/airing");
 		const data = await response.json();
-		console.log(data);
-		setCurAir(data);
+		console.log(data.top);
+		setCurAir(data.top);
 	}, []);
 	return (
 		<>
@@ -28,4 +28,4 @@ const TopAnime = () => {
 	);
 };
 
-export default TopAnime;
+export default Airing;
