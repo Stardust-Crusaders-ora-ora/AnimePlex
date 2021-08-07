@@ -1,0 +1,25 @@
+<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 250 100">
+  <defs>
+    <linearGradient id="a" x1="7.26" y1="59.13" x2="36.38" y2="59.13" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff3bff"/>
+      <stop offset=".14" stop-color="#f235f1"/>
+      <stop offset=".4" stop-color="#cf26ce"/>
+      <stop offset=".58" stop-color="#b41bb2"/>
+      <stop offset=".63" stop-color="#9f20a9"/>
+      <stop offset=".72" stop-color="#86269f"/>
+      <stop offset=".8" stop-color="#742a97"/>
+      <stop offset=".89" stop-color="#692c92"/>
+      <stop offset="1" stop-color="#662d91"/>
+    </linearGradient>
+    <linearGradient id="b" x1="38.63" y1="27.84" x2="52.17" y2="27.84" gradientTransform="rotate(-74 45.4 27.844)" xlink:href="#a"/>
+    <linearGradient id="c" x1="23.59" y1="33.48" x2="45.08" y2="33.48" gradientTransform="rotate(-52 34.33 33.482)" xlink:href="#a"/>
+    <linearGradient id="d" x1="12.69" y1="42.85" x2="39.67" y2="42.85" gradientTransform="rotate(-30 26.177 42.854)" xlink:href="#a"/>
+  </defs>
+  <text transform="translate(40.73 65.66)" font-size="25.89" fill="#fff" font-family="RSpectrRegular,R-Spectr">
+    AnimePlex
+  </text>
+  <rect x="7.26" y="55.7" width="29.12" height="6.85" rx="2.28" fill="url(#a)"/>
+  <rect x="30.84" y="24.41" width="29.12" height="6.85" rx="2.28" transform="rotate(74 45.398 27.844)" fill="url(#b)"/>
+  <rect x="19.77" y="30.05" width="29.12" height="6.85" rx="2.28" transform="rotate(52 34.337 33.48)" fill="url(#c)"/>
+  <rect x="11.62" y="39.43" width="29.12" height="6.85" rx="2.28" transform="rotate(30 26.18 42.845)" fill="url(#d)"/>
+</svg>
