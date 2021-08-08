@@ -1,9 +1,14 @@
-import { useEffect } from "react";
 
-const ShowCard = ({ showImg, title, rank, rating }) => {
+import { useHistory } from "react-router-dom";
+
+const ShowCard = ({mal_id, showImg, title, rank, rating }) => {
+	const history = useHistory();
+	const animeCardShow = (id) => {
+		history.push(`/anime/${id}`);
+	}
 	return (
 		<>
-			<div className="col-span-1 ">
+			<div className="col-span-1 " onClick={animeCardShow(mal_id)}>
 				{rank && (
 				<span className="z-index-20 absolute p-2 font-medium ml-10">#{rank}</span>
 				)}

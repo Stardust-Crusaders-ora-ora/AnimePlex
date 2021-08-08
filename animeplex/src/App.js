@@ -5,6 +5,7 @@ import TopAnime from "./components/TopAnime";
 import Trending from "./components/Trending";
 import Upcoming from "./components/Upcoming";
 import Airing from "./components/Airing";
+import Animepage from "./components/Common/Animepage";
 function App() {
 	return (
 		<Switch>
@@ -14,6 +15,7 @@ function App() {
 				<Route exact path="/trending" component={Trending}></Route>
 				<Route exact path="/upcoming" component={Upcoming}></Route>
 				<Route exact path="/airing" component={Airing}></Route>
+				<Route exact path="/anime/:name" component={Animepage}></Route>
 			</div>
 		</Switch>
 	);

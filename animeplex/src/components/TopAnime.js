@@ -17,6 +17,7 @@ const TopAnime = () => {
 				{topArr.map((show) => {
 					return (
 						<ShowCard
+							malID={show.mal_id}
 							showImg={show.image_url}
 							title={show.title}
 							rank={show.rank}
