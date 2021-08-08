@@ -8,13 +8,13 @@ const ShowCard = ({ mal_id, showImg, title, rank, rating }) => {
 	return (
 		<>
 			<div
-				className="col-span-1 "
+				className=" cursor-pointer col-span-1 transform hover:scale-110 transition ease-in-out duration-300"
 				onClick={() => {
 					animeCardShow(mal_id);
 				}}
 			>
 				{rank && (
-					<span className="z-index-20 absolute p-2 font-medium ml-10">
+					<span className=" z-index-20 absolute p-2 font-medium ml-10">
 						#{rank}
 					</span>
 				)}

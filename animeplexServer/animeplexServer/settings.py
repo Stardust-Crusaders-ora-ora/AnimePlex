@@ -25,15 +25,15 @@ SECRET_KEY = 'qv=pave9oevfa1k#bat2&___x--ysf5yzi_@b2#%xlvg!l*2h8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1',]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-REST_FRAMEWORK = {'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework.authentication.TokenAuthentication',),
-    'DEFAULT_PERMISSION_CLASSES':('rest_framework.permissions.AllowAny',),}
+REST_FRAMEWORK = {'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework.authentication.TokenAuthentication', 'rest_framework.authentication.SessionAuthentication',),
+                  'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',), }
 
 INSTALLED_APPS = [
     'corsheaders',
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'apserver',
-    
+
 
 ]
 

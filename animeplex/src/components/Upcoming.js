@@ -15,7 +15,7 @@ const Upcoming = () => {
 	return (
 		<>
 			<Navbar />
-			<div className="grid grid-cols-2 justify-center md:grid-cols-5 gap-4 mt-5 md:w-11/12 m-auto">
+			<div className="grid grid-cols-2 justify-center md:grid-cols-5 gap-4 mt-5 md:w-11/12 m-auto ">
 				{upcom.map((show) => {
 					return (
 						<ShowCard

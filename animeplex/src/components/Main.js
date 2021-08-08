@@ -2,14 +2,22 @@ import { Navbar } from "./Common/Navbar";
 import { SearchBar } from "./SearchBar";
 import { ShowsArea } from "./ShowsArea";
 import { Carousel } from "./Carousel";
+import { useState, useEffect } from "react";
+
 const Main = () => {
+	const [loggedIn, setLoggedIn] = useState(false);
+	useEffect(() => {}, [loggedIn]);
 	return (
 		<>
 			<div>
-				<Navbar />
+				<Navbar
+					onLog={(val) => {
+						setLoggedIn(val);
+					}}
+				/>
 				<SearchBar />
 				<Carousel />
-				<ShowsArea />
+				{loggedIn && <ShowsArea />}
 			</div>
 		</>
 	);
