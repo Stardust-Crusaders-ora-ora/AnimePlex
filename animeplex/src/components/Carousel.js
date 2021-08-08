@@ -21,13 +21,13 @@ export const Carousel = () => {
 	};
 	const curAiring = async () => {
 		history.push("/airing");
-	}
+	};
 	const trending = async () => {
 		history.push("/trending");
-	}
+	};
 	const upcoming = async () => {
 		history.push("/upcoming");
-	}
+	};
 	return (
 		<div className="mix-blend-normal text-5xl  h-48 md:h-xl md:text-8xl flex">
 			<Swiper
@@ -51,8 +51,8 @@ export const Carousel = () => {
 					<h2 className="z-20">Top 50 Animes</h2>
 				</SwiperSlide>
 
-				<SwiperSlide 
-					className="flex justify-center items-center"
+				<SwiperSlide
+					className="flex cursor-pointer justify-center items-center"
 					onClick={upcoming}
 				>
 					<img
@@ -62,15 +62,21 @@ export const Carousel = () => {
 					/>
 					<h2 className="z-20">Upcoming Animes</h2>
 				</SwiperSlide>
-				<SwiperSlide className="flex justify-center items-center" onClick={trending}>
+				<SwiperSlide
+					className="flex cursor-pointer justify-center items-center"
+					onClick={trending}
+				>
 					<img
 						className="z-10 w-full absolute opacity-40"
 						src="https://media.giphy.com/media/vRc2V5ixLGh0OU02zp/giphy.gif"
 						alt="aot"
 					/>
-					<h2 className="z-20">Trending Animes</h2>
+					<h2 className="z-20">Trending</h2>
 				</SwiperSlide>
-				<SwiperSlide className="flex justify-center items-center" onClick={curAiring}>
+				<SwiperSlide
+					className="flex cursor-pointer justify-center items-center"
+					onClick={curAiring}
+				>
 					<img
 						className="z-10 w-full absolute opacity-40"
 						src="https://media.giphy.com/media/QyDHI3LJx8I9hA51Qs/giphy.gif"

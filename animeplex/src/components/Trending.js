@@ -2,22 +2,24 @@ import { useEffect, useState } from "react";
 import { Navbar } from "./Common/Navbar";
 import ShowCard from "./Common/ShowCard";
 
-const Trending = () => {
-	const [trend, setTrend] = useState([]);
+const Movie = () => {
+	const [movie, setMovie] = useState([]);
 	useEffect(async () => {
-		const response = await fetch("https://api.jikan.moe/v3/top/anime");
+		const response = await fetch(
+			"https://api.jikan.moe/v3/top/anime/1/bypopularity"
+		);
 		const data = await response.json();
-		setTrend(data.top);
+		setMovie(data.top);
 		console.log(data.top);
 	}, []);
 	return (
 		<>
 			<Navbar />
 			<div className="grid grid-cols-2 justify-center md:grid-cols-5 gap-4 mt-5 md:w-11/12 m-auto">
-				{trend.map((show) => {
+				{movie.map((show) => {
 					return (
 						<ShowCard
-							malID={show.mal_id}
+							mal_id={show.mal_id}
 							showImg={show.image_url}
 							title={show.title}
 							rank={show.rank}
@@ -30,4 +32,4 @@ const Trending = () => {
 	);
 };
 
-export default Trending;
+export default Movie;

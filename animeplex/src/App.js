@@ -15,7 +15,7 @@ function App() {
 				<Route exact path="/trending" component={Trending}></Route>
 				<Route exact path="/upcoming" component={Upcoming}></Route>
 				<Route exact path="/airing" component={Airing}></Route>
-				<Route exact path="/anime/:name" component={Animepage}></Route>
+				<Route exact path="/anime/:id" component={Animepage}></Route>
 			</div>
 		</Switch>
 	);

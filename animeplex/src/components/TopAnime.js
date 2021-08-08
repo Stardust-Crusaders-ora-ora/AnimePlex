@@ -7,8 +7,6 @@ const TopAnime = () => {
 	useEffect(async () => {
 		const response = await fetch("https://api.jikan.moe/v3/top/anime");
 		const data = await response.json();
-		setTopArr(data.top);
-		console.log(data.top);
 	}, []);
 	return (
 		<>
@@ -17,7 +15,7 @@ const TopAnime = () => {
 				{topArr.map((show) => {
 					return (
 						<ShowCard
-							malID={show.mal_id}
+							mal_id={show.mal_id}
 							showImg={show.image_url}
 							title={show.title}
 							rank={show.rank}

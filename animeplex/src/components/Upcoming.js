@@ -5,7 +5,9 @@ import ShowCard from "./Common/ShowCard";
 const Upcoming = () => {
 	const [upcom, setUpcom] = useState([]);
 	useEffect(async () => {
-		const response = await fetch("https://api.jikan.moe/v3/top/anime");
+		const response = await fetch(
+			"https://api.jikan.moe/v3/top/anime/1/upcoming"
+		);
 		const data = await response.json();
 		setUpcom(data.top);
 		console.log(data.top);
@@ -17,7 +19,7 @@ const Upcoming = () => {
 				{upcom.map((show) => {
 					return (
 						<ShowCard
-							malID={show.mal_id}
+							mal_id={show.mal_id}
 							showImg={show.image_url}
 							title={show.title}
 							rank={show.rank}
